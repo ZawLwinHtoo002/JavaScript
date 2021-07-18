@@ -1,0 +1,58 @@
+<h1>Arrow Function ES6</h1>
+<button id="bt">Click</button>
+<script>
+
+    // function one() {
+    //     console.log("This is one.");
+    // }
+
+    let one = () => console.log("This is one."); //arrow
+
+    // function two() {
+    //     let a = "This is two";
+    //     console.log(a);
+    // }
+
+    let two = () => {
+        let a = "This is two";  //arrow
+        console.log(a);
+    }
+
+    // function three(san) {   
+    //     console.log(san);
+    // }
+
+    let three = san => console.log(san); //arrow
+
+    // function four(san,yon = 2) {
+    //     console.log(san,yon);
+    // }
+
+    let four = (x, y=1) => console.log({x,y}); //arrow
+
+    // document.getElementById("bt").addEventListener("click",function () {
+    //     console.log("This is function 5.");
+    // })
+
+    document.getElementById("bt").addEventListener("click",() =>console.log("This is function 5.") ); //arrow
+
+    //IIFE
+    // (function(){
+    //     console.log("This is IIFE function.");
+    // })();
+
+    (()=>console.log("This is IIFE function."))(); //arrow
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////
+
+    let obj = {
+        name : "Zaw Lwin Htoo",
+
+        cando : function () {
+            console.log(`${this.name} can play as GK.`);
+        },
+
+        sb : () => console.log(`${obj.name}'s skill boost is reflexes.`),
+    }
+
+</script>

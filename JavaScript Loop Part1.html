@@ -1,0 +1,56 @@
+<h1>JS Loop</h1>
+<p>Fruit List</p>
+<ol>
+
+</ol>
+<script>
+
+    let fruit = ["Apple", "Orange", "Banana", "Coconut", "Grape"];
+
+    // for (let i = 0; i < fruit.length; i++) {
+    //    document.querySelector("ol").innerHTML += `<li>${fruit[i]}</li>`;
+
+    // }
+
+    // for/in //(x in)knows where to start and end.
+    // for (x in fruit) {
+    //     document.querySelector("ol").innerHTML += `<li>${fruit[x]} in for.</li>`;
+    // }
+
+    // for/of //(x of)represents each chamber of array.
+    // for (x of fruit) {
+    //     document.querySelector("ol").innerHTML += `<li>${x} of for.</li>`;
+    // }
+
+    //Array can loop itself with her way. //el represents each chamber of array & index represents index no of each chamber.
+    // ".map" can only work with Object Array Protocol.
+    // fruit.map(function (el, index) {
+    //     document.querySelector("ol").innerHTML += `<li>${el} - ${index}.</li>`;
+    // })
+
+    //normal for
+    function testingLoop(max) {
+        for (let x = 1; x <= max; x++) {
+            if(x==5){ continue;  };
+            console.log(`${x} Hello`);
+        }
+    }
+
+    // let myself = {
+
+    //     //properties
+    //     name: "Dic",
+    //     age: 20,
+    //     relationship: false,
+    //     job: "Student",
+
+        //method
+        // able: function () {
+        //     console.log(`${this.name} can play as GK position.`);
+        // }
+        //}
+    //for loop in Object
+    // for (x in myself){
+    //             document.querySelector("ol").innerHTML += `<li>${x} : ${myself[x]} .</li>`;
+    // }
+</script>

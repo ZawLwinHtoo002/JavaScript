@@ -1,0 +1,22 @@
+<h1 style="color: rgb(19, 14, 14);">javascript object, properties and methods</h1>
+<script type="text/javascript">
+    
+   let profile = {
+
+    //properties
+    name : "Zaw Lwin Htoo",
+    age : 21,
+    job : "Student",
+
+    //method
+    showpf : function () {
+        return `His name is ${this.name} and ${this.age} years old. He is a ${this.job}. He was born in ${this.getBdYear(this.age)}`;
+    },
+
+    getBdYear : function (age){
+        return 2020 - age;
+    }
+
+   }
+
+</script>

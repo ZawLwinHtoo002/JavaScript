@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Conclusion</title>
+    <style type="text/css">
+        .on {
+
+            width: 100px;
+            height: 50px;
+            border-radius: 50px;
+            /* border: solid; */
+            background: green;
+            color: white;
+            font-size: large;
+
+        }
+
+        .off {
+
+            width: 100px;
+            height: 50px;
+            border-radius: 50px;
+            /* border: solid; */
+            background: red;
+            color: white;
+            font-size: large;
+
+        }
+
+        .offon {
+
+            padding: 15px 25px;
+            font-size: 24px;
+            text-align: center;
+            cursor: pointer;
+            outline: none;
+            color: blue;
+            background-color: white;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 9px #999;
+        }
+
+        .offon:hover {
+            background-color: blue;
+            color: white;
+        }
+
+        .offon:active {
+            background-color: blue;
+            box-shadow: 0 5px white;
+            transform: translateY(4px);
+        }
+    </style>
+</head>
+
+<body>
+    <img src="../assets/lightoff.png" alt="lightoff" id="bulb">
+
+    <!-- Two button to on and off -->
+    <!-- <button onclick="powon()" class="on">Power On</button>
+    <button onclick="powoff()" class="off">Power Off</button>
+
+    <script>
+
+        let x = document.getElementById("bulb");
+
+        function powon() {
+            x.src = "../assets/lighton.png";
+        }
+
+        function powoff() {
+            x.src = "../assets/lightoff.png";
+        } -->
+
+    <!-- </script> -->
+
+    <!-- One button to on and off -->
+    <button onclick="powoffon()" class="offon">Power</button>
+    <script>
+
+        function powoffon() {
+
+            let y = document.getElementById("bulb");
+
+            if (y.getAttribute("src") == "../assets/lightoff.png") {
+                y.src = "../assets/lighton.png";
+            }
+            else {
+                y.src = "../assets/lightoff.png";
+            }
+        }
+    </script>
+</body>
+
+</html>

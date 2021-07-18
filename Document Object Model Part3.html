@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Part3</title>
+    <style type="text/css">
+        * {
+            box-sizing: border-box;
+        }
+
+        h1 {
+            border: 2px solid black;
+            padding: 10px;
+            width: 308px;
+        }
+
+        div {
+            margin-bottom: 15px;
+        }
+
+        input {
+            width: 150px;
+            height: 30px;
+            margin-right: 8px;
+        }
+
+        button {
+            height: 30px;
+            width: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="head">Text</h1>
+    <div>
+        <input type="text" id="text" onkeyup="changeText()"><button id="butText">SET TEXT</button>
+    </div>
+    <div>
+        <input type="color" id="color" onchange="changeColor()"><button id="butColor">SET COLOR</button>
+    </div>
+    <div>
+        <input type="number" id="size"><button id="butFontz" onclick="changeFontSize()">SET FONT SIZE</button>
+    </div>
+
+    <script>
+
+        let result =  document.getElementById("head");
+        //3 Finding HTML elements
+        document.getElementById("butText").onclick = function () {
+            let x = document.getElementById("text").value;
+           result.innerHTML = x;
+           console.log(`It changes text to "${x}".`);
+        }
+
+        // document.getElementById("butColor").addEventListener("click",function () {
+        //     let x = document.getElementById("color").value;
+        //     result.style.color = x;
+        //     console.log(`It changes color to "${x}".`);
+        // })
+
+        function changeFontSize() {
+            let x = document.getElementById("size").value;
+            result.style.fontSize = x+"px";
+            console.log(`It changes font-size to "${x}"px.`);
+        }
+
+        function changeColor() {
+            let x = document.getElementById("color").value;
+            result.style.color = x;
+            console.log(`It changes color to "${x}".`);
+        }
+
+        function changeText() {
+            let x = document.getElementById("text").value;
+           result.innerHTML = x;
+           console.log(`It changes text to "${x}".`);
+        }
+    </script>
+</body>
+
+</html>

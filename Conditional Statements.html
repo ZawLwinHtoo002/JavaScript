@@ -1,0 +1,31 @@
+<h1>Conditional Statements</h1>
+<script>
+    // function checkBill(bill) {
+    //     if (bill > 0) {
+    //         console.log("Yes, I have.");//true
+    //     }
+    //     else{
+    //         console.log("No, I haven't.");//false
+    //     }
+    // }
+    function checkBill2(bill) {
+        if (bill<0) {
+            console.log("No, You've borrowed 800Ks!");
+        }
+        else if (bill==0) {
+            console.log("Bill 0");
+        }
+        else if (bill<=1000) {
+            console.log("Between 0 and 1000");
+        }
+        else if (bill<=3000) {
+            console.log("Between 0 and 3000");
+        }
+        else if (bill>3000) {
+            console.log("Sayar Gyi");
+        }
+        else{
+            console.log("Wrong input! Please try again!")
+        }
+    }
+</script>
